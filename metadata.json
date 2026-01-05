@@ -1,0 +1,7 @@
+{
+  "name": "Lucid Cafe - Luxury NYC Coffee Experience",
+  "description": "A premium, high-conversion website for Lucid Cafe, located in Midtown Manhattan, featuring a sophisticated design, interactive menu, and a Gemini-powered coffee concierge.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
