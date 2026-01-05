@@ -1,11 +1,19 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
-import { MENU_DATA, CAFE_DETAILS } from "../constants";
+import { GoogleGenAI } from "@google/genai";
+import { MENU_DATA } from "../constants.tsx";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// Robust API key initialization for browser environments
+const getApiKey = () => {
+  try {
+    return (window as any).process?.env?.API_KEY || '';
+  } catch {
+    return '';
+  }
+};
 
 export const getCoffeeRecommendation = async (userQuery: string): Promise<string> => {
   try {
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const menuContext = MENU_DATA.map(m => `${m.name} (${m.category}): ${m.description} - ${m.price}`).join('\n');
     
     const response = await ai.models.generateContent({

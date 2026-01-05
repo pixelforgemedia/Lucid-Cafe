@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { MENU_PHOTOS, NAV_ITEMS, CAFE_DETAILS, MENU_DATA } from './constants';
-import { SectionHeading } from './components/SectionHeading';
-import { CoffeeConcierge } from './components/CoffeeConcierge';
-import { Toast } from './components/Toast';
+import { MENU_PHOTOS, NAV_ITEMS, CAFE_DETAILS, MENU_DATA } from './constants.tsx';
+import { SectionHeading } from './components/SectionHeading.tsx';
+import { CoffeeConcierge } from './components/CoffeeConcierge.tsx';
+import { Toast } from './components/Toast.tsx';
 
 // --- Page Components ---
 

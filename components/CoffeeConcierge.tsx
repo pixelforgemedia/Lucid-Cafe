@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { getCoffeeRecommendation } from '../services/geminiService';
+import { getCoffeeRecommendation } from '../services/geminiService.tsx';
 
 export const CoffeeConcierge: React.FC = () => {
   const [query, setQuery] = useState('');
